@@ -1,0 +1,59 @@
+header{
+  .header__top{
+    background-color: $primary-dark;
+    padding: .75rem 0;
+    color: #fff;
+    font-size: .8rem;
+
+    @include media-breakpoint-down(md){
+      padding: .4rem 0;
+
+      .container > .d-flex{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+      }
+    }
+
+    .links__uteis {
+      a{
+        padding-left: 10px;
+
+        &:not(:last-child){
+          padding-right: 10px;
+          border-right: 1px solid $primary-light;
+        }
+      }
+    }
+  }
+
+  .navbar{
+    background-color: $primary;
+    padding: 2rem 1.5rem;
+    color: #fff;
+
+    .img__logo figure{
+      height: 27px;
+      width: auto;
+
+      img{
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .navbar-nav .nav-item{
+      .nav-link{
+        color: #fff;
+        font-weight: 500;
+        font-size: .9rem;
+        padding: 0 1rem;
+
+        &:hover{
+          color: $primary-light;
+        }
+      }
+    }
+  }
+}

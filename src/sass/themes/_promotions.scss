@@ -1,0 +1,143 @@
+#promotions{
+  padding: 60px 0;
+
+  h1{
+    text-align: center;
+    color: $primary;
+    font-size: 2rem;
+  }
+
+  .nav.tabs__promotions{
+    margin-top: 2rem;
+    justify-content: center;
+
+    .nav-link{
+      all: unset;
+
+      color: #333;
+      cursor: pointer;
+      white-space: nowrap;
+      padding: 16px 15px;
+      border-bottom: 2px solid #efefef;
+      min-width: 100px;
+      font-size: 1.25rem;
+      line-height: 24px;
+      transition: all .1s ease-in;
+      -webkit-tap-highlight-color: transparent;
+      font-weight: 500;
+      text-align: center;
+      
+      &.active{
+        color: #002198;
+        font-weight: 700;
+        border-bottom: 2px solid;
+      }
+    }
+  }
+}
+
+#promotions .tab-content{
+  margin-top: 2rem;
+
+  .plan-card{
+    background-color: $card-bg;
+    border-radius: 10px;
+
+    &.special__offer{
+      --bg-opacity: 1;
+      background-color: #002198;
+      background-color: rgba(0,33,152,var(--bg-opacity));
+      width: 100%;
+      padding-top: 0;
+      padding-bottom: 1rem;
+      text-align: center;
+      --text-opacity: 1;
+      color: #fff;
+      color: rgba(255,255,255,var(--text-opacity));
+      flex: 1 1 0%;
+
+      .special__offer--badge {
+        --bg-opacity: 1;
+        background-color: #ff36bd;
+        background-color: rgba(255,54,189,var(--bg-opacity));
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        width: 100%;
+        --text-opacity: 1;
+        color: #fff;
+        color: rgba(255,255,255,var(--text-opacity));
+        display: flex;
+        justify-content: center;
+        text-align: right;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1rem;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-bottom: 20px;
+
+  
+        span{
+          position: relative;
+          padding: 0 1rem;
+  
+          img{
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            left: -20%;
+          }
+        }
+      }
+    }
+    
+    .plan-card__content{
+      .plan-card__header{
+        .plan-card__title{
+          font-size: 3.25rem;
+          font-weight: bold;
+          margin: 0;
+        }
+
+        p{
+          font-weight: 500;
+        }
+      }
+
+      .plan-card__apps{
+        .plan-card__icons{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: 5px;
+
+          img{
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+          }
+        }
+      }
+
+      .plan-card__footer{
+        .old-price{
+          font-size: .95rem;
+          span{
+            text-decoration: line-through;
+            font-weight: 600;
+          }
+        }
+
+        .new-price{
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .plan-card__divider {
+      border-bottom: 1px solid;
+      margin: 1rem 1.5rem;
+      border-color: #324fb7;
+    }
+  }
+}
