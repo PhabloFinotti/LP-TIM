@@ -39,6 +39,129 @@
 #promotions .tab-content{
   margin-top: 2rem;
 
+  .plan-card--wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .share-container{
+      display: flex;
+      align-items: center;
+
+      &:hover .share-actions,
+      .share-actions:hover{
+        visibility: visible!important;
+        opacity: 1!important;
+      }
+
+      .share{
+        all: unset;
+        height: 30px;
+        width: 30px;
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        margin-left: 0.25rem;
+        --bg-opacity: 1;
+        background-color: #fff;
+        background-color: rgba(255,255,255,var(--bg-opacity));
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        
+        .share-actions{
+          right: -41px;
+          top: -177px;
+          width: 152px;
+          --bg-opacity: 1;
+          background-color: #fff;
+          background-color: rgba(255, 255, 255, var(--bg-opacity));
+          padding: 0.45rem;
+          border-width: 1px;
+          position: absolute;
+          transition: all 1s ease;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-color: #033974;
+          border-radius: 6px;
+
+          visibility: hidden;
+          opacity: 0;
+
+
+          &::before{
+            top: 100%;
+            left: 64%;
+            content: "";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border: 12px solid hsla(0,0%,43.9%,0);
+            border-top-color: #fff;
+            margin-left: -12px;
+          }
+
+          a{
+            display: flex;
+            align-items: center;
+            width: 123px;
+            height: 30px;
+            border-radius: 5px;
+            padding: 10px;
+            font-weight: 100;
+            color: #fff;
+            font-size: .875rem;
+            margin: 3px 0;
+            column-gap: 5px;
+
+            &.whatsapp{
+              background-color: $green-active;
+            }
+            &.email{
+              background-color: $secondary;
+            }
+            &.facebook{
+              background-color: #3b5998;
+            }
+
+          }
+
+          .indication__copy-link {
+            width: 123px;
+            background: #eaeaea;
+            padding: 3px 10px;
+            margin-top: 3px;
+            display: flex;
+            overflow: hidden;
+            border-bottom: 1px solid;
+            --border-opacity: 1;
+            border-color: #707070;
+            border-color: rgba(112,112,112,var(--border-opacity));
+            align-items: center;
+
+            input{
+              font-size: .9em;
+              width: 100%;
+              --text-opacity: 1;
+              color: #707070;
+              color: rgba(112,112,112,var(--text-opacity));
+              background-color: transparent;
+              outline: none;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .plan-card{
     background-color: $card-bg;
     border-radius: 10px;
@@ -130,6 +253,7 @@
 
         .new-price{
           font-size: 1.8rem;
+          font-weight: 500;
         }
       }
     }
@@ -138,6 +262,32 @@
       border-bottom: 1px solid;
       margin: 1rem 1.5rem;
       border-color: #324fb7;
+    }
+
+    .plan-card__btns{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 1rem;
+
+      .btn-secondary-dark{
+        color: $white;
+        font-size: 1.25rem;
+        padding: 1rem 2.1875rem;
+      }
+      
+      .btn-outline-white{
+        font-size: 1rem;
+        padding: 0.8rem 0.85rem;
+
+      }
+    }
+
+    .plan-card__observation{
+      font-size: .9rem;
+      margin-top: 1rem;
+      color: $primary-light;
     }
   }
 }
