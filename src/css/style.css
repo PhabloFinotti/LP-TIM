@@ -11118,7 +11118,11 @@ header .navbar {
   background-color: #002198;
   padding: 2rem 1.5rem;
   color: #fff;
-  height: 5.625rem;
+}
+@media (min-width: 992px) {
+  header .navbar {
+    height: 5.625rem;
+  }
 }
 header .navbar .img__logo figure {
   height: 27px;
@@ -11131,14 +11135,16 @@ header .navbar .img__logo figure img {
 header .navbar .navbar-nav {
   align-items: center;
 }
-header .navbar .navbar-nav .nav-item {
-  padding-left: 5px;
-  margin-left: 5px;
-}
-header .navbar .navbar-nav .nav-item:not(:last-child) {
-  padding-right: 5px;
-  margin-right: 5px;
-  border-right: 1px solid #79b2ed;
+@media (min-width: 992px) {
+  header .navbar .navbar-nav .nav-item {
+    padding-left: 5px;
+    margin-left: 5px;
+  }
+  header .navbar .navbar-nav .nav-item:not(:last-child) {
+    padding-right: 5px;
+    margin-right: 5px;
+    border-right: 1px solid #79b2ed;
+  }
 }
 header .navbar .navbar-nav .nav-item .nav-link {
   color: #fff;
@@ -11517,6 +11523,12 @@ footer .footer__buttons {
   -moz-column-gap: 30px;
        column-gap: 30px;
 }
+@media (max-width: 767.98px) {
+  footer .footer__buttons {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+}
 footer .footer__buttons a {
   padding: 18px 40px;
   font-size: 1.1rem;
@@ -11526,6 +11538,11 @@ footer .footer__buttons a {
   justify-content: center;
   -moz-column-gap: 10px;
        column-gap: 10px;
+}
+@media (max-width: 767.98px) {
+  footer .footer__buttons a {
+    width: 100%;
+  }
 }
 footer .footer__logo {
   display: block;
