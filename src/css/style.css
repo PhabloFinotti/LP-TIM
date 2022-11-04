@@ -11118,6 +11118,7 @@ header .navbar {
   background-color: #002198;
   padding: 2rem 1.5rem;
   color: #fff;
+  height: 5.625rem;
 }
 header .navbar .img__logo figure {
   height: 27px;
@@ -11127,14 +11128,59 @@ header .navbar .img__logo figure img {
   height: 100%;
   width: 100%;
 }
+header .navbar .navbar-nav {
+  align-items: center;
+}
+header .navbar .navbar-nav .nav-item {
+  padding-left: 5px;
+  margin-left: 5px;
+}
+header .navbar .navbar-nav .nav-item:not(:last-child) {
+  padding-right: 5px;
+  margin-right: 5px;
+  border-right: 1px solid #79b2ed;
+}
 header .navbar .navbar-nav .nav-item .nav-link {
   color: #fff;
   font-weight: 500;
   font-size: 0.9rem;
-  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
 header .navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #fff;
+}
+header .navbar .navbar-nav .nav-item .nav-link p {
+  margin: 0;
+  line-height: 1;
+}
+header .navbar .navbar-nav .nav-item .nav-link img {
+  width: 34px;
+  height: 50px;
+}
+@media (max-width: 767.98px) {
+  header .navbar .navbar-nav .nav-item .nav-link img {
+    width: 21px;
+    height: 40px;
+  }
+}
+header .navbar .navbar-nav .nav-item .nav-link span.online {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #0bd83a;
+}
+header .navbar .navbar-nav .nav-item .nav-link .nav-number-text span {
   color: #79b2ed;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+header .navbar .navbar-nav .nav-item .nav-link .nav-number-text p {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 body {
