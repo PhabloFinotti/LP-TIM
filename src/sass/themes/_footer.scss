@@ -12,6 +12,11 @@ footer {
     margin-bottom: 2.25rem;
     column-gap: 30px;
 
+    @include media-breakpoint-down(md){
+      flex-direction: column;
+      row-gap: 15px;
+    }
+
     a{
       padding: 18px 40px;
       font-size: 1.1rem;
@@ -20,6 +25,10 @@ footer {
       align-items: center;
       justify-content: center;
       column-gap: 10px;
+
+      @include media-breakpoint-down(md){
+        width: 100%;
+      }
     }
   }
 
