@@ -1,0 +1,12 @@
+.glide__slides{
+  align-items: center;
+}
+
+.glide__slide{
+  height: auto;
+  transform: scale(.9);
+}
+
+.glide__slide--active{
+  transform: scale(1);
+}

@@ -11082,6 +11082,76 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.glide {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+.glide * {
+  box-sizing: inherit;
+}
+.glide__track {
+  overflow: hidden;
+}
+.glide__slides {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform-style: preserve-3d;
+  touch-action: pan-Y;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+.glide__slides--dragging {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.glide__slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  white-space: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.glide__slide a {
+  -webkit-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.glide__arrows {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.glide__bullets {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.glide--rtl {
+  direction: rtl;
+}
+
 a {
   text-decoration: none;
   color: #79b2ed;
@@ -11298,6 +11368,7 @@ body {
   justify-content: center;
   flex-direction: column;
   row-gap: 10px;
+  transition: all 150ms ease-in-out;
 }
 #promotions .tab-content .plan-card--wrapper .share-container {
   display: flex;
@@ -11406,19 +11477,23 @@ body {
 #promotions .tab-content .plan-card {
   background-color: #efefef;
   border-radius: 10px;
-}
-#promotions .tab-content .plan-card.special__offer {
-  --bg-opacity: 1;
-  background-color: #002198;
-  background-color: rgba(0, 33, 152, var(--bg-opacity));
   width: 100%;
   padding-top: 0;
   padding-bottom: 1rem;
   text-align: center;
   --text-opacity: 1;
-  color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
   flex: 1 1 0%;
+  color: #002198;
+}
+#promotions .tab-content .plan-card .plan-card__content {
+  padding-top: 20px;
+}
+#promotions .tab-content .plan-card.special__offer {
+  --bg-opacity: 1;
+  background-color: #002198;
+  background-color: rgba(0, 33, 152, var(--bg-opacity));
+  color: #fff;
 }
 #promotions .tab-content .plan-card.special__offer .special__offer--badge {
   --bg-opacity: 1;
@@ -11438,11 +11513,10 @@ body {
   font-size: 1rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  margin-bottom: 20px;
 }
 #promotions .tab-content .plan-card.special__offer .special__offer--badge span {
   position: relative;
-  padding: 0 1rem;
+  padding: 0 0 0 1rem;
 }
 #promotions .tab-content .plan-card.special__offer .special__offer--badge span img {
   top: 50%;
@@ -11498,13 +11572,15 @@ body {
   font-size: 1.25rem;
   padding: 1rem 2.1875rem;
 }
-#promotions .tab-content .plan-card .plan-card__btns .btn-outline-white {
+#promotions .tab-content .plan-card .plan-card__btns .btn-outline-white,
+#promotions .tab-content .plan-card .plan-card__btns .btn-outline-primary {
   font-size: 1rem;
   padding: 0.8rem 0.85rem;
 }
 #promotions .tab-content .plan-card .plan-card__observation {
   font-size: 0.9rem;
-  margin-top: 1rem;
+  width: 33ch;
+  margin: 1rem auto 0;
   color: #79b2ed;
 }
 
@@ -11567,4 +11643,17 @@ footer .copyright {
   font-size: 0.925rem;
   font-weight: 600;
   text-align: center;
+}
+
+.glide__slides {
+  align-items: center;
+}
+
+.glide__slide {
+  height: auto;
+  transform: scale(0.9);
+}
+
+.glide__slide--active {
+  transform: scale(1);
 }
