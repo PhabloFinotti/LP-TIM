@@ -11495,7 +11495,11 @@ body {
   background-color: rgba(0, 33, 152, var(--bg-opacity));
   color: #fff;
 }
-#promotions .tab-content .plan-card.special__offer .special__offer--badge {
+#promotions .tab-content .plan-card.special__offer .bigger__icons img {
+  filter: brightness(0) invert(1);
+  border-color: #00cdff;
+}
+#promotions .tab-content .plan-card .special__offer--badge {
   --bg-opacity: 1;
   background-color: #ff36bd;
   background-color: rgba(255, 54, 189, var(--bg-opacity));
@@ -11514,11 +11518,11 @@ body {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-#promotions .tab-content .plan-card.special__offer .special__offer--badge span {
+#promotions .tab-content .plan-card .special__offer--badge span {
   position: relative;
   padding: 0 0 0 1rem;
 }
-#promotions .tab-content .plan-card.special__offer .special__offer--badge span img {
+#promotions .tab-content .plan-card .special__offer--badge span img {
   top: 50%;
   transform: translateY(-50%);
   position: absolute;
@@ -11528,6 +11532,7 @@ body {
   font-size: 3.25rem;
   font-weight: bold;
   margin: 0;
+  text-transform: uppercase;
 }
 #promotions .tab-content .plan-card .plan-card__content .plan-card__header p {
   font-weight: 500;
@@ -11543,6 +11548,23 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 5px;
+}
+#promotions .tab-content .plan-card .plan-card__content .plan-card__apps .plan-card__icons.bigger__icons {
+  -moz-column-gap: 0;
+       column-gap: 0;
+}
+#promotions .tab-content .plan-card .plan-card__content .plan-card__apps .plan-card__icons.bigger__icons img {
+  height: 20px;
+  width: auto;
+  border-radius: 0;
+}
+#promotions .tab-content .plan-card .plan-card__content .plan-card__apps .plan-card__icons.bigger__icons img:not(:last-child) {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #002198;
+}
+#promotions .tab-content .plan-card .plan-card__content .plan-card__apps p {
+  font-weight: 500;
 }
 #promotions .tab-content .plan-card .plan-card__content .plan-card__footer .old-price {
   font-size: 0.95rem;

@@ -185,37 +185,42 @@
       background-color: #002198;
       background-color: rgba(0,33,152,var(--bg-opacity));
       color: #fff;
-      
 
-      .special__offer--badge {
-        --bg-opacity: 1;
-        background-color: #ff36bd;
-        background-color: rgba(255,54,189,var(--bg-opacity));
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        width: 100%;
-        --text-opacity: 1;
-        color: #fff;
-        color: rgba(255,255,255,var(--text-opacity));
-        display: flex;
-        justify-content: center;
-        text-align: right;
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 1rem;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-  
-        span{
-          position: relative;
-          padding: 0 0 0 1rem;
-  
-          img{
-            top: 50%;
-            transform: translateY(-50%);
-            position: absolute;
-            left: -20%;
-          }
+      
+      .bigger__icons img {
+        filter: brightness(0) invert(1);
+        border-color: #00cdff;
+      }
+    }
+
+    .special__offer--badge {
+      --bg-opacity: 1;
+      background-color: #ff36bd;
+      background-color: rgba(255,54,189,var(--bg-opacity));
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      width: 100%;
+      --text-opacity: 1;
+      color: #fff;
+      color: rgba(255,255,255,var(--text-opacity));
+      display: flex;
+      justify-content: center;
+      text-align: right;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1rem;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      span{
+        position: relative;
+        padding: 0 0 0 1rem;
+
+        img{
+          top: 50%;
+          transform: translateY(-50%);
+          position: absolute;
+          left: -20%;
         }
       }
     }
@@ -226,6 +231,7 @@
           font-size: 3.25rem;
           font-weight: bold;
           margin: 0;
+          text-transform: uppercase;
         }
 
         p{
@@ -245,6 +251,26 @@
             height: 30px;
             border-radius: 5px;
           }
+
+          &.bigger__icons{
+            column-gap: 0;
+
+            img{
+              height: 20px;
+              width: auto;
+              border-radius: 0;
+              
+              &:not(:last-child){
+                margin-right: 10px;
+                padding-right: 10px;
+                border-right: 1px solid $primary;
+              }
+            }
+          }
+        }
+
+        p{
+          font-weight: 500;
         }
       }
 
