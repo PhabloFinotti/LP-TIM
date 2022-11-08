@@ -5,6 +5,22 @@ window.onload = function () {
     navigator.clipboard.writeText(e.target.nextElementSibling.value);
   });
 
+  const root = document.querySelector(':root');
+  const a11yPlus = document.getElementById('a11y__plus');
+  const a11yMinus = document.getElementById('a11y__minus');
+
+  a11yPlus.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (parseInt(root.style.fontSize) === 26) return;
+    root.style.fontSize = root.style.fontSize ? `${parseInt(root.style.fontSize) + 2}px` : '16px';
+  });
+
+  a11yMinus.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (parseInt(root.style.fontSize) === 16) return;
+    root.style.fontSize = root.style.fontSize ? `${parseInt(root.style.fontSize) - 2}px` : '16px';
+  });
+
   new Glide('#ultrafibra-carousel', {
     type: 'slider',
     rewind: false,
