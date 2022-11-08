@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build -c vite.config.cjs --emptyOutDir",
     "preview": "vite preview"
   },
   "devDependencies": {
