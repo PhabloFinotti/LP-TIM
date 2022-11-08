@@ -1,3 +1,5 @@
+import Glide from '@glidejs/glide';
+
 window.onload = function () {
   const btnCopy = document.querySelector('.indication__copy-link');
 
