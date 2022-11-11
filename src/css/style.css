@@ -11856,6 +11856,41 @@ footer .copyright {
   transform: scale(1);
 }
 
+.glide__track {
+  position: relative;
+}
+
+.controls__carousel {
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  right: -8px;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 575.98px) {
+  .controls__carousel {
+    left: 0;
+    right: 0;
+  }
+}
+.controls__carousel button {
+  all: unset;
+  cursor: pointer;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.controls__carousel button:hover svg {
+  fill: #79b2ed;
+}
+.controls__carousel button svg {
+  height: 40px;
+  width: 40px;
+  fill: #002198;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 #modal__area .modal-dialog {
   margin-top: 10vh;
   width: -webkit-fit-content;
