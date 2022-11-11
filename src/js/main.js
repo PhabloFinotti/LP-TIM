@@ -63,7 +63,7 @@ window.onload = function () {
     new Glide('#ultrafibra-carousel', {
       type: 'slider',
       rewind: false,
-      startAt: 0,
+      startAt: 1,
       perView: 3,
       focusAt: 'center',
       autoplay: 3000,
