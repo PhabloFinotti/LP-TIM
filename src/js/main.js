@@ -63,9 +63,11 @@ window.onload = function () {
     new Glide('#ultrafibra-carousel', {
       type: 'slider',
       rewind: false,
-      startAt: 1,
+      startAt: 0,
       perView: 3,
       focusAt: 'center',
+      autoplay: 3000,
+      rewind: true,
       gap: -5,
       breakpoints: {
         1000: {
@@ -95,6 +97,8 @@ window.onload = function () {
               startAt: 0,
               perView: 3,
               focusAt: 'center',
+              autoplay: 3000,
+              rewind: true,
               gap: -5,
               breakpoints: {
                 1000: {
