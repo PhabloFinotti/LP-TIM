@@ -2,8 +2,9 @@ const path = require('path');
 const { defineConfig } = require('vite');
 
 module.exports = defineConfig({
-  root: path.resolve(__dirname, 'src'),
+  root: '',
   base: '',
+  publicDir: 'src/public',
   build: {
     rollupOptions: {
       input: {

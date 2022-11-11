@@ -59,3 +59,24 @@ footer {
     text-align: center;
   }
 }
+
+#fixed__footer{
+  width: 100%;
+  padding: .9375rem 0;
+  background-color: $primary;
+  display: flex;
+  justify-content: center;
+  height: $footer-fixed-height;
+  position: fixed;
+  bottom: 0;
+  transform: translateY($footer-fixed-height);
+  transition: all 450ms ease-in-out;
+
+  &.is-fixed{
+    transform: none;
+  }
+
+  .btn{
+    padding: .75rem 1rem;
+  }
+}

@@ -1,6 +1,15 @@
 import Glide from '@glidejs/glide';
 
 window.onload = function () {
+  const footerFixed = document.getElementById('fixed__footer');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 200) {
+      footerFixed.classList.add('is-fixed');
+    } else {
+      footerFixed.classList.remove('is-fixed');
+    }
+  });
+
   const btnCopy = document.querySelector('.indication__copy-link');
 
   btnCopy.addEventListener('click', function (e) {
@@ -23,29 +32,37 @@ window.onload = function () {
     root.style.fontSize = root.style.fontSize ? `${parseInt(root.style.fontSize) - 2}px` : '16px';
   });
 
-  new Glide('#ultrafibra-carousel', {
-    type: 'slider',
-    rewind: false,
-    startAt: 0,
-    perView: 3,
-    focusAt: 'center',
-    gap: -5,
-    breakpoints: {
-      1000: {
-        perView: 2,
-      },
-      768: {
-        perView: 1,
-      },
-    },
-  }).mount();
+  const btnFormArea = document.getElementById('send__form--area');
+  const inputCEP = document.getElementById('input__cep');
+  const modalCEPVariable = document.getElementById('modal__cep--variable');
+  const spanOnlineSearching = document.getElementById('online__searching');
+  const modalArea = new bootstrap.Modal(document.getElementById('modal__area'), {});
+  btnFormArea.addEventListener('click', function (e) {
+    e.preventDefault();
+    this.setAttribute('disabled', true);
+    setTimeout(() => {
+      btnFormArea.removeAttribute('disabled');
+      if (!inputCEP.value) {
+        inputCEP.classList.add('has-error');
+        alert('Você precisa informar um CEP');
+        return;
+      }
+
+      inputCEP.classList.remove('has-error');
+
+      modalCEPVariable.innerHTML = inputCEP.value;
+      spanOnlineSearching.innerHTML = Math.floor(Math.random() * (180 - 140 + 1) + 140);
+
+      modalArea.show();
+    }, 600);
+  });
 
   if (document.querySelector('#ultrafibra-carousel')) {
     // Mounts first products carousel listing all items
     new Glide('#ultrafibra-carousel', {
       type: 'slider',
       rewind: false,
-      startAt: 0,
+      startAt: 1,
       perView: 3,
       focusAt: 'center',
       gap: -5,
