@@ -1,4 +1,5 @@
 import Glide from '@glidejs/glide';
+import bootstrap from 'bootstrap/dist/js/bootstrap.bundle';
 
 window.onload = function () {
   const footerFixed = document.getElementById('fixed__footer');
