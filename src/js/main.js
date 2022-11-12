@@ -11,8 +11,17 @@ window.onload = function () {
     }
   });
 
-  const btnCopy = document.querySelector('.indication__copy-link');
+  document.getElementById('input__cep').addEventListener('input', function (e) {
+    console.log(e);
+    console.log(this.value.length >= 9);
+    if (this.value.length >= 9) {
+      e.preventDefault();
+      return;
+    }
+    this.value = this.value.replace(/[^\d]/, '').replace(/(\d{5})(\d{3})/, '$1-$2');
+  });
 
+  const btnCopy = document.querySelector('.indication__copy-link');
   btnCopy.addEventListener('click', function (e) {
     navigator.clipboard.writeText(e.target.nextElementSibling.value);
   });
