@@ -11346,6 +11346,7 @@ body {
 }
 #banner .banner__item figure.banner__item--responsivo {
   display: none;
+  height: 450px;
 }
 @media (max-width: 767.98px) {
   #banner .banner__item figure.banner__item--responsivo {
@@ -11372,7 +11373,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.25);
+}
+#banner .banner__item .banner__conteudo .container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media (max-width: 767.98px) {
+  #banner .banner__item .banner__conteudo .container {
+    align-items: flex-end;
+    justify-content: center;
+  }
 }
 #banner .banner__item .banner__conteudo h2 {
   font-size: 3rem;
@@ -11392,11 +11405,30 @@ body {
   color: #f8f9fa;
   max-width: 35ch;
 }
-#banner .banner__item .banner__conteudo .btn-green-active {
+#banner .banner__item .banner__conteudo .btn {
   color: #fff;
   font-weight: bold;
-  padding: 10px 25px;
   text-transform: uppercase;
+  margin-right: 210px;
+}
+#banner .banner__item .banner__conteudo .btn:hover {
+  color: #002198;
+}
+@media (max-width: 1199.98px) {
+  #banner .banner__item .banner__conteudo .btn {
+    margin-right: 60px;
+  }
+}
+@media (max-width: 991.98px) {
+  #banner .banner__item .banner__conteudo .btn {
+    margin-right: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  #banner .banner__item .banner__conteudo .btn {
+    padding: 10px 30px !important;
+    margin-bottom: 10px;
+  }
 }
 
 #form__area {

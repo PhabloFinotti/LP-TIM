@@ -12,6 +12,7 @@
 
       &.banner__item--responsivo{
         display: none;
+        height: 450px;
 
         @include media-breakpoint-down(md){
           display: block;
@@ -41,7 +42,22 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(0,0,0,.25);
+      // background-color: rgba(0,0,0,.25);
+
+      .container{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      @include media-breakpoint-down(md){
+        .container{
+          align-items: flex-end;
+          justify-content: center;
+        }
+      }
 
       h2 {
         font-size: 3rem;
@@ -64,11 +80,28 @@
 
       }
 
-      .btn-green-active{
+      .btn{
         color: #fff;
         font-weight: bold;
-        padding: 10px 25px;
         text-transform: uppercase;
+        margin-right: 210px;
+
+        &:hover{
+          color: $primary;
+        }
+
+        @include media-breakpoint-down(xl){
+          margin-right: 60px;
+        }
+
+        @include media-breakpoint-down(lg){
+          margin-right: 0;
+        }
+
+        @include media-breakpoint-down(md){
+          padding: 10px 30px!important;
+          margin-bottom: 10px;
+        }
       }
     }
   }
